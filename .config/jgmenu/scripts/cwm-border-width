@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sd "borderwidth .*" "borderwidth $1" ~/.config/cwm/rc
+
+pkill -1 cwm

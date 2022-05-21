@@ -1,0 +1,21 @@
+#!/bin/sh
+
+entry=$1
+
+if [ $entry = "poweroff" ] || [ $entry = "reboot" ]; then
+    if [ $(~/scripts/rofi/confirm "confirm") = "yes" ]; then
+        doas $entry
+    fi
+elif [ $entry = "exit" ]; then
+    if [ $(~/scripts/rofi/confirm "exit?") = "yes" ]; then
+    wmname=`wmctrl -m | sed -n 's/Name: //p'`
+        if [ $wmname = "qtile" ] || [ $wmname = "LG3D" ]; then
+            qtile cmd-obj -o cmd -f shutdown
+        elif [ $wmname = "dwm" ]; then
+            dwmc quit
+            doas killall swhks swhkd
+        elif [ $wmname = "worm" ]; then
+            killall worm
+        fi
+    fi
+fi

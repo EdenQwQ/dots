@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$(eww state)" = "" ]; then
+    eww open eww
+else 
+    eww close eww
+fi

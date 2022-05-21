@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if grep -q "animations = true" ~/.config/picom.conf; then
+    sd "animations = true" "animations = false" ~/.config/picom.conf
+else
+    sd "animations = false" "animations = true" ~/.config/picom.conf
+fi
+
+killall picom
+
+sleep 0.1
+
+picom &

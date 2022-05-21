@@ -1,0 +1,9 @@
+#!/bin/sh
+
+. ~/scripts/rofi/config
+
+entry=$(ls ~/.local/share/nvim/session/ | rofi_dmenu "vim" ' ')
+
+if [ $entry != '' ]; then
+    kitty --class nvim --name nvim --hold -e nvim -S ~/.local/share/nvim/session/$entry
+fi

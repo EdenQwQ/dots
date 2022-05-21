@@ -1,0 +1,11 @@
+#!/bin/sh
+
+new=$(ls ~/.local/share/nvim/session)
+old=$(cat ~/.cache/jgmenu/.vim-session)
+if [ "${new}" != "${old}" ]]; then
+    echo $new > ~/.cache/jgmenu/.vim-session
+    echo "^tag(vim)" > ~/.config/jgmenu/vim-session.csv
+    for i in $(cat ~/.cache/jgmenu/.vim-session); do
+        echo "$i,kitty nvim -S ~/.local/share/nvim/session/$i"
+    done >> ~/.config/jgmenu/vim-session.csv
+fi

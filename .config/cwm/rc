@@ -1,0 +1,80 @@
+borderwidth 6
+color activeborder "#DDB6F2"
+color inactiveborder "#6E6C7E"
+color groupborder "#C9CBFF"
+color ungroupborder "#6E6C7E"
+color menubg "#282a36"
+color menufg "#44475a"
+color font "#D9E0EE"
+color selfont "#F5E0DC"
+
+fontname "Comic Mono:size=12"
+
+sticky yes
+
+ignore rofi
+ignore jgmenu
+ignore screenkey
+ignore tty-clock
+ignore trayer
+
+gap 20 20 20 20
+
+unbind-key all
+
+bind-key MC-q quit
+bind-key MC-r restart
+bind-key 4S-f window-fullscreen
+bind-key 4-q window-close
+bind-key 4-j window-cycle
+bind-key 4-k window-rcycle
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4S-1 window-movetogroup-1
+bind-key 4S-2 window-movetogroup-2
+bind-key 4S-3 window-movetogroup-3
+bind-key 4S-0 window-stick
+bind-key 4C-1 group-toggle-1
+bind-key 4C-2 group-toggle-2
+bind-key 4C-3 group-toggle-3
+bind-key 4SC-1 window-group-1
+bind-key 4SC-2 window-group-2
+bind-key 4SC-3 window-group-3
+bind-key 4-Left window-move-left-big
+bind-key 4-Right window-move-right-big
+bind-key 4-Up window-move-up-big
+bind-key 4-Down window-move-down-big
+bind-key 4C-Left window-resize-left-big
+bind-key 4C-Right window-resize-right-big
+bind-key 4C-Up window-resize-up-big
+bind-key 4C-Down window-resize-down-big
+bind-key M4-Left window-snap-left
+bind-key M4-Right window-snap-right
+bind-key M4-Up window-snap-up
+bind-key M4-Down window-snap-down
+bind-key M4-Up-Right window-snap-up-right
+bind-key M4-Up-Left window-snap-up-left
+bind-key M4-Down-Right window-snap-down-right
+bind-key M4-Down-Left window-snap-down-left
+bind-key M4-h window-hmaximize
+bind-key M4-l window-hmaximize
+bind-key M4-k window-vmaximize
+bind-key M4-j window-vmaximize
+bind-key 4S-Left window-vtile
+bind-key 4S-Up window-htile
+bind-key CM-Left pointer-move-left-big
+bind-key CM-Right pointer-move-right-big
+bind-key CM-Up pointer-move-up-big
+bind-key CM-Down pointer-move-down-big
+
+# unbind-mouse M-1
+# unbind-mouse M-2
+# unbind-mouse M-3
+unbind-mouse all
+bind-mouse 4-1			window-move
+bind-mouse 4-2			window-lower
+bind-mouse M-1			window-resize
+bind-mouse "1"          menu-window
+bind-mouse "2"          "/home/eden/scripts/lazy/toggle-eww"
+bind-mouse "3"          "jgmenu_run"

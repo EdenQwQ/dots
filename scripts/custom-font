@@ -1,0 +1,7 @@
+#!/bin/sh
+
+font="$(yad --title='Select a custom font' --font --separate-output)"
+
+if [ "$font" != "" ]; then
+    ~/scripts/change-font "$font"
+fi

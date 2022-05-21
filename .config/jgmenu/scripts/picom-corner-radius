@@ -1,0 +1,19 @@
+#!/bin/sh
+
+. ~/scripts/rofi/config
+
+if [ $1 != '' ]; then
+    entry=$1
+else
+    entry=$(rofi_allow_cus "corner" ' ')
+fi
+
+if [ $entry != '' ]; then
+    sd "corner-radius = .*" "corner-radius = $entry" ~/.config/picom.conf
+
+    killall picom
+
+    sleep 0.1
+
+    picom &
+fi

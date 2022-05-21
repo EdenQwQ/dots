@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rofi_dmenu() {
+    rofi -dmenu -i -no-custom -window-title $1 -sep $2
+}
+
+rofi_allow_cus() {
+    rofi -dmenu -i -window-title $1 -sep $2
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+~/.config/jgmenu/scripts/vim-session-hook
+~/.config/jgmenu/scripts/gtk-theme-hook
+~/.config/jgmenu/scripts/qutebrowser-session-hook

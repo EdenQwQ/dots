@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if grep -q "fading = true" ~/.config/picom.conf; then
+    sd "fading = true" "fading = false" ~/.config/picom.conf
+else
+    sd "fading = false" "fading = true" ~/.config/picom.conf
+fi
+
+killall picom
+
+sleep 0.1
+
+picom &

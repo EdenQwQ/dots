@@ -1,0 +1,11 @@
+#!/bin/sh
+
+new=$(ls ~/.themes)
+old=$(cat ~/.cache/jgmenu/.gtk-theme-list)
+if [ "${new}" != "${old}" ]]; then
+    echo $new > ~/.cache/jgmenu/.gtk-theme-list
+    echo "^tag(gtk)" > ~/.config/jgmenu/gtk-theme.csv
+    for i in $(cat ~/.cache/jgmenu/.gtk-theme-list); do
+        echo "$i,~/.config/jgmenu/scripts/gtk-theme $i"
+    done >> ~/.config/jgmenu/gtk-theme.csv
+fi

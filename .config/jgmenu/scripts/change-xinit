@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -rf ~/.xinitrc
+ln -s ~/xsessions/.xinitrc-$1 ~/.xinitrc

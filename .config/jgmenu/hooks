@@ -1,0 +1,9 @@
+~/.config/jgmenu/append.csv
+~/.config/jgmenu/prepend.csv
+~/.config/jgmenu/tags.csv
+~/.config/jgmenu/jgmenurc
+~/.config/jgmenu/startup
+~/.config/jgmenu/hooks
+~/.themes
+~/.local/share/nvim/session
+~/.local/share/qutebrowser/sessions

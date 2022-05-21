@@ -1,0 +1,7 @@
+#!/bin/sh
+
+old=$(cat ~/.cache/jgmenu/.last-gtktheme)
+if [ "${old}" != $1 ]; then
+    echo $1 > ~/.cache/jgmenu/.last-gtktheme
+    sd "gtk-theme-name=.*" "gtk-theme-name=$1" ~/.config/gtk-3.0/settings.ini
+fi

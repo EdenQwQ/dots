@@ -1,0 +1,29 @@
+#!/bin/sh
+
+fontname="$(echo $1 | cut -d'|' -f1)"
+fontstyle="$(echo $1 | cut -d'|' -f2)"
+fontsize="$(echo $1 | cut -d'|' -f3)"
+
+if [ "$fontstyle" = "" ]; then
+    fontstyle="Mono"
+fi
+
+if [ "$fontsize" = "" ]; then
+    fontsize="20"
+fi
+
+fontsize2="$(echo $fontsize/2+2 | bc)"
+
+sd "font_family.*" "font_family $fontname" ~/.config/kitty/kitty.conf
+sd "font_size.*" "font_size $fontsize2" ~/.config/kitty/kitty.conf
+sd "font.*" "font = $fontname $fontstyle $fontsize" ~/.config/jgmenu/jgmenurc
+sd "font: .*" "font: \"$fontname $fontstyle $fontsize\";" ~/.config/rofi/config.rasi
+sd "fontname .*" "fontname \"$fontname:size=$fontsize2\"" ~/.config/cwm/rc
+sd "fonts.default_family.*" "fonts.default_family\", \"$fontname\")" ~/.config/qutebrowser/config.py
+sd "fonts.default_size.*" "fonts.default_size\", \"${fontsize2}pt\")" ~/.config/qutebrowser/config.py
+sd "gtk-font-name=.*" "gtk-font-name=$fontname $fontstyle $fontsize2" ~/.config/gtk-3.0/settings.ini
+sd "gtk-font-name=.*" "gtk-font-name=\"$fontname $fontstyle, $fontsize\"" ~/.config/gtk-4.0/settings.ini
+sd "font-family:.*" "font-family: \'$fontname\';" ~/.config/eww/scss/*/*
+sd "font=.*" "font=\"$fontname\"" ~/.config/betterlockscreenrc
+
+pkill -1 cwm

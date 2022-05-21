@@ -1,0 +1,11 @@
+#!/bin/sh
+
+new=$(ls ~/.local/share/qutebrowser/sessions/ | grep yml)
+old=$(cat ~/.cache/jgmenu/.qutebrowser-session)
+if [ "${new}" != "${old}" ]]; then
+    echo $new > ~/.cache/jgmenu/.qutebrowser-session
+    echo "^tag(qutebrowser)" > ~/.config/jgmenu/qutebrowser-session.csv
+    for i in $(cat ~/.cache/jgmenu/.qutebrowser-session); do
+        echo "$i,qutebrowser -r ~/.local/share/qutebrowser/sessions/$i"
+    done >> ~/.config/jgmenu/qutebrowser-session.csv
+fi

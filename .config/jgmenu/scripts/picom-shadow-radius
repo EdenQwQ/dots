@@ -1,0 +1,19 @@
+#!/bin/sh
+
+. ~/scripts/rofi/config
+
+if [ $1 != '' ]; then
+    entry=$1
+else
+    entry=$(rofi_allow_cus "shadow" ' ')
+fi
+
+if [ $entry != '' ]; then
+    sd "shadow-radius = .*" "shadow-radius = $entry" ~/.config/picom.conf
+
+    killall picom
+
+    sleep 0.1
+
+    picom &
+fi

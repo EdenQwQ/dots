@@ -1,0 +1,32 @@
+#!/bin/sh
+
+. ~/scripts/rofi/config
+
+entry=$(printf "poweroff;reboot;exit;lock;suspend" | rofi_dmenu "power" ';')
+
+if [ $entry = "poweroff" ] || [ $entry = "reboot" ]; then
+    if [ $(~/scripts/rofi/confirm "confirm") = "yes" ]; then
+        doas $entry
+    fi
+elif [ $entry = "lock" ]; then
+    betterlockscreen -l dimblur
+elif [ $entry = "suspend" ]; then
+    doas zzz
+elif [ $entry = "exit" ]; then
+    if [ $(~/scripts/rofi/confirm "exit?") = "yes" ]; then
+        wmname=`wmctrl -m | sed -n 's/Name: //p'`
+        rm -rf /tmp/srsp.tmp
+        doas killall swhkd swhks
+        if [ $wmname = "qtile" ] || [ $wmname = "LG3D" ]; then
+            qtile cmd-obj -o cmd -f shutdown
+        elif [ $wmname = "dwm" ]; then
+            dwmc quit
+        elif [ $wmname = "worm" ]; then
+            killall worm
+        elif [ $wmname = "CWM" ]; then
+            pkill cwm
+        else
+            pkill xinit
+        fi
+    fi
+fi

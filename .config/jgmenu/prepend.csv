@@ -1,0 +1,22 @@
+^sep(Default apps)
+Browser,firefox,firefox
+Terminal,kitty,kitty
+File manager,nemo,nemo
+Editor,nvim,nvim
+Wallpaper,nitrogen,nitrogen
+^sep()
+^sep(System)
+Power,^checkout(power),emblem-system
+^sep()
+^sep(Tweaks)
+Picom,^checkout(picom),preferences-system-windows
+Gtk theme,^checkout(gtk),preferences-desktop-theme
+Xsession,^checkout(xsession),user-desktop
+Cwm,^checkout(cwm),preferences-desktop-theme
+Font,^checkout(font),preferences-desktop-font
+^sep()
+^sep(Misc)
+Vim session,^checkout(vim),vim
+Qutebrowser session,^checkout(qutebrowser),qutebrowser
+^sep()
+^sep(Apps)

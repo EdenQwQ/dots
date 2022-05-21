@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. ~/scripts/rofi/config
+
+entry=$(ls ~/scripts/lazy | rofi_dmenu "lazy" ' ')
+
+~/scripts/lazy/$entry

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if grep -q "corner-radius = 0" ~/.config/picom.conf; then
+    previous=$(cat ~/scripts/lazy/.picom-previous-corner)
+    sd "corner-radius = 0" "corner-radius = $previous" ~/.config/picom.conf
+else
+    previous="$(grep "corner-radius = .*" ~/.config/picom.conf | cut -d '=' -f 2)"
+    echo $previous > ~/scripts/lazy/.picom-previous-corner
+    sd "corner-radius = .*" "corner-radius = 0" ~/.config/picom.conf
+fi
+
+killall picom
+
+sleep 0.1
+
+picom &

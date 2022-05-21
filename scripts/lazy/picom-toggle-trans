@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if grep -q "inactive-opacity = 1" ~/.config/picom.conf; then
+    sd "inactive-opacity = 1" "inactive-opacity = 0.8" ~/.config/picom.conf
+    sd "active-opacity = 1" "active-opacity = 0.95" ~/.config/picom.conf
+    patch -p1 < ~/scripts/picom-trans.diff ~/.config/picom.conf
+else
+    sd "inactive-opacity = 0.8" "inactive-opacity = 1" ~/.config/picom.conf
+    sd "active-opacity = 0.95" "active-opacity = 1" ~/.config/picom.conf
+    patch -p1 < ~/scripts/picom-trans.diff ~/.config/picom.conf -R
+fi
+
+killall picom
+
+sleep 0.1
+
+picom &

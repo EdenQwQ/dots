@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if pidof picom; then
+    killall picom
+else
+    picom &
+fi

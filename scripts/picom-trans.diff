@@ -1,0 +1,13 @@
+--- .config/picom.conf.trans	2022-04-24 16:07:28.463181888 +0800
++++ .config/picom.conf	2022-04-24 16:07:33.358182027 +0800
+@@ -139,8 +139,8 @@
+ #    opacity-rule = [ "80:class_g = 'URxvt'" ];
+ #
+ opacity-rule = [
+-  # "90:class_g = 'dwm'",
+-  # "90:class_g = 'jgmenu'",
++  "90:class_g = 'dwm'",
++  "90:class_g = 'jgmenu'",
+   # "90:class_g = 'kitty'"
+ ]
+ 

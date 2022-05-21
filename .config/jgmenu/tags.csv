@@ -1,0 +1,57 @@
+^tag(power)
+poweroff,~/.config/jgmenu/scripts/power poweroff,system-shutdown
+reboot,~/.config/jgmenu/scripts/power reboot,system-reboot
+exit,~/.config/jgmenu/scripts/power exit,system-log-out
+
+^tag(picom)
+toggle,~/scripts/lazy/toggle-picom
+toggle animation,~/scripts/lazy/picom-toggle-animation
+toggle corner,~/scripts/lazy/picom-toggle-corner
+toggle shadow,~/scripts/lazy/picom-toggle-shadow
+toggle trans,~/scripts/lazy/picom-toggle-trans
+shadow radius,^checkout(shadow-radius)
+corner radius,^checkout(corner-radius)
+
+^tag(shadow-radius)
+10,~/.config/jgmenu/scripts/picom-shadow-radius 10
+12,~/.config/jgmenu/scripts/picom-shadow-radius 12
+14,~/.config/jgmenu/scripts/picom-shadow-radius 14
+16,~/.config/jgmenu/scripts/picom-shadow-radius 16
+18,~/.config/jgmenu/scripts/picom-shadow-radius 18
+20,~/.config/jgmenu/scripts/picom-shadow-radius 20
+custom,~/.config/jgmenu/scripts/picom-shadow-radius
+
+^tag(corner-radius)
+10,~/.config/jgmenu/scripts/picom-corner-radius 10
+12,~/.config/jgmenu/scripts/picom-corner-radius 12
+14,~/.config/jgmenu/scripts/picom-corner-radius 14
+16,~/.config/jgmenu/scripts/picom-corner-radius 16
+18,~/.config/jgmenu/scripts/picom-corner-radius 18
+20,~/.config/jgmenu/scripts/picom-corner-radius 20
+custom,~/.config/jgmenu/scripts/picom-corner-radius
+
+^tag(xsession)
+dwm,~/.config/jgmenu/scripts/change-xinit dwm
+cwm,~/.config/jgmenu/scripts/change-xinit cwm
+2bwm,~/.config/jgmenu/scripts/change-xinit 2bwm
+worm,~/.config/jgmenu/scripts/change-xinit worm
+
+^tag(cwm)
+border width,^checkout(cwm-border-width)
+
+^tag(cwm-border-width)
+0,~/.config/jgmenu/scripts/cwm-border-width 0
+2,~/.config/jgmenu/scripts/cwm-border-width 2
+4,~/.config/jgmenu/scripts/cwm-border-width 4
+6,~/.config/jgmenu/scripts/cwm-border-width 6
+8,~/.config/jgmenu/scripts/cwm-border-width 8
+10,~/.config/jgmenu/scripts/cwm-border-width 10
+
+^tag(font)
+FantasqueSans,~/scripts/change-font "FantasqueSansMono Nerd Font|regular|20"
+Comic Mono,~/scripts/change-font "Comic Mono|Normal|20"
+Custom,~/scripts/custom-font
+
+. ~/.config/jgmenu/vim-session.csv
+. ~/.config/jgmenu/gtk-theme.csv
+. ~/.config/jgmenu/qutebrowser-session.csv
