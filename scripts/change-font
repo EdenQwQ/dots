@@ -25,5 +25,7 @@ sd "gtk-font-name=.*" "gtk-font-name=$fontname $fontstyle $fontsize2" ~/.config/
 sd "gtk-font-name=.*" "gtk-font-name=\"$fontname $fontstyle, $fontsize\"" ~/.config/gtk-4.0/settings.ini
 sd "font-family:.*" "font-family: \'$fontname\';" ~/.config/eww/scss/*/*
 sd "font=.*" "font=\"$fontname\"" ~/.config/betterlockscreenrc
+sd "font = .*" "font = $fontname $fontsize2" ~/.config/dunst/dunstrc
 
 pkill -1 cwm
+killall dunst

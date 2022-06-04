@@ -5,6 +5,7 @@ blog,kitty nvim -S ~/.local/share/nvim/session/blog
 chadwm,kitty nvim -S ~/.local/share/nvim/session/chadwm
 cwm,kitty nvim -S ~/.local/share/nvim/session/cwm
 damn,kitty nvim -S ~/.local/share/nvim/session/damn
+dunst,kitty nvim -S ~/.local/share/nvim/session/dunst
 dwm,kitty nvim -S ~/.local/share/nvim/session/dwm
 fish,kitty nvim -S ~/.local/share/nvim/session/fish
 jgmenu,kitty nvim -S ~/.local/share/nvim/session/jgmenu
@@ -15,4 +16,6 @@ srsp,kitty nvim -S ~/.local/share/nvim/session/srsp
 swhkd,kitty nvim -S ~/.local/share/nvim/session/swhkd
 treefetch,kitty nvim -S ~/.local/share/nvim/session/treefetch
 vim,kitty nvim -S ~/.local/share/nvim/session/vim
+waybar,kitty nvim -S ~/.local/share/nvim/session/waybar
+wayfire,kitty nvim -S ~/.local/share/nvim/session/wayfire
 worm,kitty nvim -S ~/.local/share/nvim/session/worm

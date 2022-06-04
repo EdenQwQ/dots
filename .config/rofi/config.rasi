@@ -17,7 +17,7 @@ configuration{
     display-window: " 﩯  window";
     display-Network: " 󰤨  Network";
     sidebar-mode: true;
-    matching: "fuzzy";
+    /* matching: "fuzzy"; */
     terminal: "kitty";
 }
 

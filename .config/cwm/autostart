@@ -4,3 +4,5 @@
 
 trayer --edge top --align left --widthtype request --heighttype pixel\
     --height 48 --margin 20 --distance 20 --padding 10 &
+
+kdeconnect-indicator &

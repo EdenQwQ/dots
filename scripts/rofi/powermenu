@@ -25,6 +25,8 @@ elif [ $entry = "exit" ]; then
             killall worm
         elif [ $wmname = "CWM" ]; then
             pkill cwm
+        elif [ $wmname = "bspwm" ]; then
+            bspc quit
         else
             pkill xinit
         fi

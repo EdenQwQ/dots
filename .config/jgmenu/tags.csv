@@ -35,6 +35,7 @@ dwm,~/.config/jgmenu/scripts/change-xinit dwm
 cwm,~/.config/jgmenu/scripts/change-xinit cwm
 2bwm,~/.config/jgmenu/scripts/change-xinit 2bwm
 worm,~/.config/jgmenu/scripts/change-xinit worm
+bspwm,~/.config/jgmenu/scripts/change-xinit bspwm
 
 ^tag(cwm)
 border width,^checkout(cwm-border-width)

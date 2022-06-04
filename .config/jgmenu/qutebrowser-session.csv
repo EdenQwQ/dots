@@ -1,5 +1,4 @@
 ^tag(qutebrowser)
-_autosave.yml,qutebrowser -r ~/.local/share/qutebrowser/sessions/_autosave.yml
 age.yml,qutebrowser -r ~/.local/share/qutebrowser/sessions/age.yml
 catppuccin.yml,qutebrowser -r ~/.local/share/qutebrowser/sessions/catppuccin.yml
 default.yml,qutebrowser -r ~/.local/share/qutebrowser/sessions/default.yml

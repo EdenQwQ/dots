@@ -7,3 +7,7 @@ rofi_dmenu() {
 rofi_allow_cus() {
     rofi -dmenu -i -window-title $1 -sep $2
 }
+
+wofi_dmenu() {
+    wofi --term "kitty" -i --prompt $1 -G --dmenu
+}

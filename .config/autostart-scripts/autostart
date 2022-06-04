@@ -4,6 +4,7 @@ exec nitrogen --restore &
 
 xrdb ~/.Xresources &
 
+export PATH="$HOME/.cargo/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export GDK_SCALE=1
 export GDK_DPI_SCALE=1
@@ -14,10 +15,9 @@ SDL_IM_MODULE=fcitx
 
 exec xinput set-prop "SYNA1D31:00 06CB:CD48 Touchpad" "Synaptics Tap Action" 0, 0, 0, 0, 1, 3, 2 &
 
-doas rm -rf /run/user/0/swhk*
 killall swhks
 doas killall swhkd
-XDG_RUNTIME_DIR=/run/user/0 swhks &
+swhks &
 doas pkexec swhkd -c $1 &
 
 picom &
@@ -30,8 +30,6 @@ jgmenu --hide-on-startup &
 
 musikcubed &
 
-kdeconnect-indicator &
-
 nm-applet &
 
 sleep 1
@@ -41,3 +39,9 @@ setxkbmap -option caps:escape &
 fcitx5 -d -r &
 
 eww daemon &
+
+dunst &
+
+dbus-run-session pulseaudio -D &
+
+/usr/libexec/polkit-gnome-authentication-agent-1 &
