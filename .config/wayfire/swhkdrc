@@ -1,0 +1,29 @@
+include /home/eden/.config/swhkd/swhkdrc
+
+ignore ctrl + alt + l
+ignore super + enter
+ignore ctrl + alt + e
+ignore super + space
+
+print
+    wayshot -f ~/Pictures/screenshots/$(date '+%F_%T').png
+
+ctrl + print
+    wayshot -f ~/Pictures/screenshots/$(date '+%F_%T').png -s "$(slurp -f '%x %y %w %h')"
+alt + print
+    wayshot --stdout | wl-copy
+
+alt + ctrl + print
+    wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | wl-copy
+
+super + b
+    pkill -SIGUSR1 waybar
+
+super + {v, x}
+    ~/scripts/wofi/{vim, powermenu}
+
+super + p
+    wofi --show drun,run
+
+super + ctrl + {n, p, space}
+    mpc {next, prev, toggle}
