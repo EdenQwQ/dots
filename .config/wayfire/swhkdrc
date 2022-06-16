@@ -1,4 +1,6 @@
 include /home/eden/.config/swhkd/swhkdrc
+include /home/eden/.config/swhkd/rofi.swhkdrc
+include /home/eden/.config/swhkd/mpc.swhkdrc
 
 ignore ctrl + alt + l
 ignore super + enter
@@ -18,12 +20,3 @@ alt + ctrl + print
 
 super + b
     pkill -SIGUSR1 waybar
-
-super + {v, x}
-    ~/scripts/wofi/{vim, powermenu}
-
-super + p
-    wofi --show drun,run
-
-super + ctrl + {n, p, space}
-    mpc {next, prev, toggle}

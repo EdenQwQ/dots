@@ -1,9 +1,6 @@
 @import "mocha.css";
 
 * {
-    font-family: 'Comic Mono';
-    font-size: 14px;
-    min-height: 0;
 }
 
 window#waybar {
@@ -12,6 +9,8 @@ window#waybar {
 }
 
 tooltip {
+    font-family: 'ComicMono NF';
+    font-size: 14px;
 	background: @base01;
 	border-radius: 5px;
 	border-width: 2px;
@@ -30,8 +29,11 @@ tooltip {
 #tray,
 #custom-weather,
 #custom-github,
-#custom-xbps
+#custom-xbps,
+#custom-swhkd
 {
+    font-family: 'ComicMono NF';
+    font-size: 14px;
 	padding: 2px 10px;
     background: shade(alpha(@base01, 0.8), 1.00);
     border-radius: 15px;
@@ -41,70 +43,36 @@ tooltip {
     margin-right: 5px;
 }
 
-/* #tray { */
-/*     margin-left: 10px */
-/* } */
+#tags {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+	margin-top: 5px;
+    border-radius: 15px;
+    background: shade(alpha(@base01, 0.8), 1.00);
+}
 
-/* #clock { */
-/*     margin-right: 10px */
-/* } */
+#tags button {
+	padding: 0px;
+	color: @base03;
+	font-family: 'Monofur Nerd Font';
+	font-size: 14px;
+}
 
-/* #workspaces { */
-/*     background: @base01; */
-/*     margin-left: 5px; */
-/*     margin-top: 5px; */
-/*     margin-bottom: 5px; */
-/*     border-radius: 15px; */
-/* } */
+#tags button.occupied {
+	color: @base07;
+}
 
-/* #workspaces button { */
-/*     padding-left: 10px; */
-/*     padding-right: 10px; */
-/*     min-width: 0; */
-/*     color: @base04; */
-/* } */
+#tags button.focused {
+	color: @base05;
+}
 
-/* #workspaces button.focused { */
-/*     color: @base05; */
-/* } */
+#tags button:hover {
+    background: shade(alpha(@base02, 0.8), 1.00);
+    color: @base05;
+}
 
-/* #workspaces button.urgent { */
-/*     color: @base06; */
-/* } */
-
-/* #workspaces button:hover { */
-/*     background: @base01; */
-/*     border-color: @base01; */
-/* 	color: @base05; */
-/* } */
-
-/* #network, #mpd, #tray { */
-/*     padding-left: 15px; */
-/*     padding-right: 2px; */
-/*     background: @base01; */
-/*     border-radius: 15px 0px 0px 15px; */
-/*     margin-top: 5px; */
-/*     margin-bottom: 5px; */
-/* } */
-
-/* #custom-vpn { */
-/*     background: @base01; */
-/*     padding-right: 10px; */
-/*     margin-top: 5px; */
-/*     margin-bottom: 5px; */
-/* } */
-
-/* #clock, #memory { */
-/*     padding-right: 15px; */
-/*     margin-right: 5px; */
-/*     border-radius: 0px 15px 15px 0px; */
-/* } */
-
-/* #custom-spotify { */
-/*     background: @base01; */
-/*     margin-top: 5px; */
-/*     margin-bottom: 5px; */
-/*     padding-right: 15px; */
-/*     padding-left: 15px; */
-/*     border-radius: 15px; */
-/* } */
+#tags button.focused:hover {
+    color: @base07;
+}
