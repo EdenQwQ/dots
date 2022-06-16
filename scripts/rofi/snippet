@@ -1,0 +1,9 @@
+#!/bin/sh
+
+. ~/scripts/rofi/config
+
+snipdir=~/Documents/snippets/
+entry=$(ls $snipdir | rofi_dmenu "snippet" ' ')
+
+data=$([ -x "${snipdir}/${entry}" ] && "${snipdir}/${entry}" || head --bytes=-1 ${snipdir}/${entry})
+echo $data | wl-copy

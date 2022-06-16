@@ -1,0 +1,12 @@
+#!/bin/sh
+
+export PATH="$HOME/.cargo/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export GDK_SCALE=1
+export GDK_DPI_SCALE=1
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+SDL_IM_MODULE=fcitx
+export all_proxy="http://127.0.0.1:7890/"
+export ALL_PROXY="http://127.0.0.1:7890/"

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+styles="mocha|macchiato|frappe|latte"
+if ( echo "$styles" | fgrep -q "$1" ); then
+    sd "$styles" "$1" ~/.config/fish/config.fish
+    sd "$styles" "$1" ~/.config/kitty/kitty.conf
+    sd "$styles" "$1" ~/.vim/.vimrc
+    sd "$styles" "$1" ~/.config/qutebrowser/config.py
+    sd "$styles" "$1" ~/.config/waybar/style.css
+    pkill -SIGUSR2 waybar
+else
+    echo "Unknown style: $1"
+fi

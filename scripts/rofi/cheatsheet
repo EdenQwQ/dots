@@ -4,4 +4,6 @@
 
 question=$(rofi_allow_cus "cheatsheet" | sed 's/ /+/g')
 
-exec kitty --hold curl cht.sh/$question
+if [ "$question" != "" ]; then
+    exec kitty --hold curl cht.sh/$question
+fi

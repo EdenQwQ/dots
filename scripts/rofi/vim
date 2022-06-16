@@ -5,5 +5,5 @@
 entry=$(ls ~/.local/share/nvim/session/ | rofi_dmenu "vim" ' ')
 
 if [ $entry != '' ]; then
-    kitty --class nvim --name nvim --hold -e nvim -S ~/.local/share/nvim/session/$entry
+    kitty --class=nvim,nvim --name nvim -o initial_window_width=1440 -o initial_window_height=900 --hold -e fish -c "nvim -S ~/.local/share/nvim/session/$entry"
 fi

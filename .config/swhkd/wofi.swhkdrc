@@ -1,0 +1,5 @@
+super + {v, x}
+    ~/scripts/wofi/{vim, powermenu}
+
+super + p
+    wofi --show drun,run

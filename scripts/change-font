@@ -17,7 +17,7 @@ fontsize2="$(echo $fontsize/2+2 | bc)"
 sd "font_family.*" "font_family $fontname" ~/.config/kitty/kitty.conf
 sd "font_size.*" "font_size $fontsize2" ~/.config/kitty/kitty.conf
 sd "font.*" "font = $fontname $fontstyle $fontsize" ~/.config/jgmenu/jgmenurc
-sd "font: .*" "font: \"$fontname $fontstyle $fontsize\";" ~/.config/rofi/config.rasi
+sd "font: .*" "font: \"$fontname $fontstyle $fontsize2\";" ~/.config/rofi/config.rasi
 sd "fontname .*" "fontname \"$fontname:size=$fontsize2\"" ~/.config/cwm/rc
 sd "fonts.default_family.*" "fonts.default_family\", \"$fontname\")" ~/.config/qutebrowser/config.py
 sd "fonts.default_size.*" "fonts.default_size\", \"${fontsize2}pt\")" ~/.config/qutebrowser/config.py

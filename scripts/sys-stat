@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+charging_status=$(acpi -b | awk '{print $3}' | cut -d "," -f 1)
+battery_percent=$(acpi -b | awk '{print $4}')
+memory=$(free -m | awk 'NR==2{printf "🐏 Memory: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }')
+memory_percent=$(free -m | awk 'NR==2{printf "%.2f", $3*100/$2 }')
+wm=$(wmctrl -m | sed -n 's/Name: //p')
+shell=$(basename $SHELL)
+
+dunstcmd="dunstify -u critical -t 8000 -h string:x-dunst-stack-tag:"
+
+${dunstcmd}status "$(
+    echo "🪟 WM: $wm"
+    echo "🐚 Shell: $shell"
+    echo "⏲️ Uptime: $(uptime -p)"
+    uname -sr | awk '{printf "🖥️ Kernel: %s\n", $0}'
+)"
+
+${dunstcmd}battery "$(
+    printf "🔋 Battery: $battery_percent ($charging_status)"
+)" -h int:value:"$battery_percent"
+
+${dunstcmd}memory "$(
+    echo $memory
+)" -h int:value:"$memory_percent"

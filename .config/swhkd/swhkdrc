@@ -1,0 +1,46 @@
+# swhkd
+super + escape
+	doas pkill -INT swhkd
+super + ctrl + r
+	doas pkill -HUP swhkd
+
+# Launch Apps
+super + shift + {w}
+	{qutebrowser}
+
+super + enter
+    kitty -o initial_window_width=1800 -o initial_window_height=1200 -e fish
+
+# Screenshot
+print
+	scrot 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f ~/Pictures ; feh ~/Pictures/$f'
+	
+control + print
+	scrot -s 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f ~/Pictures ; feh ~/Pictures/$f'
+
+# Volume control
+volumeup
+	# amixer set Master 5%+ && ~/scripts/change-volume
+	pactl set-sink-volume @DEFAULT_SINK@ +5% && ~/scripts/change-volume
+volumedown
+	# amixer set Master 5%- && ~/scripts/change-volume
+	pactl set-sink-volume @DEFAULT_SINK@ -5% && ~/scripts/change-volume
+
+# mute
+# 	amixer set Master toggle
+
+# Misc
+super + shift + s
+    screenkey
+
+super + space
+    jgmenu_run
+
+ctrl + alt + e
+    ~/scripts/lazy/toggle-eww
+
+ctrl + alt + l
+    betterlockscreen -l dimblur
+
+super + n
+	~/scripts/take-note

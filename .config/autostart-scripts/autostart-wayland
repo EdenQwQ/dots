@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY &
+wlsunset -s 12:00 -S 12:00 -t 3500 &
+swaybg -m fill -i ~/Pictures/wallpapers/blossom3cat.png &
+~/.local/bin/clash &
+mpd &
+kanshi &
+doas killall swhks swhkd
+sleep 1
+swhks &
+pkexec swhkd -c $1 &
+doas killall evremap
+sleep 1
+doas evremap remap ~/.config/evremap.toml &
+waybar &
+nm-applet --indicator &
+kdeconnect-indicator &
+blueman-applet &
+fcitx5 -d -r &
+/usr/lib/xdg-desktop-portal-wlr &
+/usr/libexec/polkit-gnome-authentication-agent-1 &

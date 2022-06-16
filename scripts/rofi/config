@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. /etc/environment
+
 rofi_dmenu() {
     rofi -dmenu -i -no-custom -window-title $1 -sep $2
 }

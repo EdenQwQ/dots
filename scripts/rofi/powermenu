@@ -28,7 +28,7 @@ elif [ $entry = "exit" ]; then
         elif [ $wmname = "bspwm" ]; then
             bspc quit
         else
-            pkill xinit
+            wayland-logout
         fi
     fi
 fi

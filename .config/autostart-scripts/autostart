@@ -17,8 +17,9 @@ exec xinput set-prop "SYNA1D31:00 06CB:CD48 Touchpad" "Synaptics Tap Action" 0, 
 
 killall swhks
 doas killall swhkd
+sleep 1
 swhks &
-doas pkexec swhkd -c $1 &
+pkexec swhkd -c $1 &
 
 picom &
 
@@ -41,7 +42,5 @@ fcitx5 -d -r &
 eww daemon &
 
 dunst &
-
-dbus-run-session pulseaudio -D &
 
 /usr/libexec/polkit-gnome-authentication-agent-1 &

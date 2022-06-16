@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pipewire &
+sleep 1
+exec /usr/libexec/xdg-desktop-portal-wlr -r
