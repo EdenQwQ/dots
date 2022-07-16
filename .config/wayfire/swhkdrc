@@ -1,22 +1,11 @@
 include /home/eden/.config/swhkd/swhkdrc
 include /home/eden/.config/swhkd/rofi.swhkdrc
 include /home/eden/.config/swhkd/mpc.swhkdrc
+include /home/eden/.config/swhkd/wayshot.swhkdrc
 
 ignore ctrl + alt + l
 ignore super + enter
 ignore ctrl + alt + e
 ignore super + space
-
-print
-    wayshot -f ~/Pictures/screenshots/$(date '+%F_%T').png
-
-ctrl + print
-    wayshot -f ~/Pictures/screenshots/$(date '+%F_%T').png -s "$(slurp -f '%x %y %w %h')"
-alt + print
-    wayshot --stdout | wl-copy
-
-alt + ctrl + print
-    wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | wl-copy
-
 super + b
     pkill -SIGUSR1 waybar
