@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY &
-wlsunset -s 12:00 -S 12:00 -t 3500 &
+wlsunset -l 30 -L 120 -t 3500 -T 5000 &
 swaybg -m fill -i ~/Pictures/wallpapers/blossom3cat.png &
 ~/.local/bin/clash &
 mpd &
@@ -8,7 +8,7 @@ kanshi &
 doas killall swhks swhkd
 sleep 1
 swhks &
-pkexec swhkd -c $1 &
+pkexec /usr/bin/swhkd -c $1 &
 doas killall evremap
 sleep 1
 doas evremap remap ~/.config/evremap.toml &

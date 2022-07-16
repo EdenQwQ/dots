@@ -19,9 +19,9 @@ killall swhks
 doas killall swhkd
 sleep 1
 swhks &
-pkexec swhkd -c $1 &
+pkexec /usr/bin/swhkd -c $1 &
 
-picom &
+# picom &
 
 redshift -PO 3600 &
 

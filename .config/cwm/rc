@@ -8,7 +8,7 @@ color menufg "#44475a"
 color font "#D9E0EE"
 color selfont "#F5E0DC"
 
-fontname "Comic Mono:size=12"
+fontname "ComicMono NF:size=12"
 
 sticky yes
 

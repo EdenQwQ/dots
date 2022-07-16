@@ -1,7 +1,6 @@
 ^tag(vim)
 2bwm,kitty nvim -S ~/.local/share/nvim/session/2bwm
 __LAST__,kitty nvim -S ~/.local/share/nvim/session/__LAST__
-blog,kitty nvim -S ~/.local/share/nvim/session/blog
 chadwm,kitty nvim -S ~/.local/share/nvim/session/chadwm
 cwm,kitty nvim -S ~/.local/share/nvim/session/cwm
 damn,kitty nvim -S ~/.local/share/nvim/session/damn
@@ -9,8 +8,10 @@ dunst,kitty nvim -S ~/.local/share/nvim/session/dunst
 dwm,kitty nvim -S ~/.local/share/nvim/session/dwm
 fish,kitty nvim -S ~/.local/share/nvim/session/fish
 jgmenu,kitty nvim -S ~/.local/share/nvim/session/jgmenu
+learn_julia,kitty nvim -S ~/.local/share/nvim/session/learn_julia
 nimdow,kitty nvim -S ~/.local/share/nvim/session/nimdow
 qtile,kitty nvim -S ~/.local/share/nvim/session/qtile
+river,kitty nvim -S ~/.local/share/nvim/session/river
 rofi,kitty nvim -S ~/.local/share/nvim/session/rofi
 srsp,kitty nvim -S ~/.local/share/nvim/session/srsp
 swhkd,kitty nvim -S ~/.local/share/nvim/session/swhkd

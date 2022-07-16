@@ -9,7 +9,7 @@ super + shift + {w}
 	{qutebrowser}
 
 super + enter
-    kitty -o initial_window_width=1800 -o initial_window_height=1200 -e fish
+    GLFW_IM_MODULE=ibus kitty -o initial_window_width=1800 -o initial_window_height=1200 -e fish
 
 # Screenshot
 print

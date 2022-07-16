@@ -1,10 +1,8 @@
-@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
-
 configuration{
-    modi: "run,drun,window,windowcd,emoji";
-    combi-modi: "window,drun";
+    modi: "run,drun";
+    combi-modi: "run,drun";
     lines: 5;
-    font: "Comic Mono Normal 20";
+    font: "ComicMono NF Regular 10";
     show-icons: true;
     icon-theme: "Oranchelo";
     terminal: "st";
@@ -29,11 +27,12 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 720px;
-    border: 6px;
+    width: 540px;
+    height: 360.0px;
+    border: 3.0px;
     border-color: @border-col;
     background-color: @bg-col;
-    border-radius: 10px;
+    border-radius: 5.0px;
 }
 
 mainbox {
@@ -43,16 +42,16 @@ mainbox {
 inputbar {
     children: [prompt,entry];
     background-color: @bg-col;
-    border-radius: 10px;
-    padding: 4px;
+    border-radius: 5.0px;
+    padding: 2.0px;
 }
 
 prompt {
     background-color: @blue;
-    padding: 12px;
+    padding: 6.0px;
     text-color: @bg-col;
-    border-radius: 6px;
-    margin: 40px 0px 0px 20px;
+    border-radius: 3.0px;
+    margin: 20.0px 0.0px 0.0px 10.0px;
 }
 
 textbox-prompt-colon {
@@ -61,34 +60,34 @@ textbox-prompt-colon {
 }
 
 entry {
-    padding: 12px;
-    margin: 40px 0px 0px 10px;
+    padding: 6.0px;
+    margin: 20.0px 0.0px 0.0px 5.0px;
     text-color: @fg-col;
     background-color: @bg-col;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 12px 0px 0px;
-    margin: 20px 0px 0px 20px;
+    border: 0.0px 0.0px 0.0px;
+    padding: 6.0px 0.0px 0.0px;
+    margin: 10.0px 0.0px 0.0px 10.0px;
     columns: 2;
     background-color: @bg-col;
 }
 
 element {
-    padding: 10px;
+    padding: 5.0px;
     background-color: @bg-col;
     text-color: @fg-col  ;
 }
 
 element-icon {
-    size: 30px;
+    size: 15.0px;
 }
 
 element selected {
     background-color:  @selected-col ;
     text-color: @bg-col  ;
-    border-radius: 10px;
+    border-radius: 5.0px;
 }
 
 mode-switcher {
@@ -96,7 +95,7 @@ mode-switcher {
   }
 
 button {
-    padding: 20px;
+    padding: 10.0px;
     background-color: @bg-col-light;
     text-color: @grey;
     vertical-align: 0.5; 
