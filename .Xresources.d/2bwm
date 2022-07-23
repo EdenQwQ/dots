@@ -1,0 +1,10 @@
+twobwm.border_width: 10
+twobwm.outer_border: 5
+twobwm.focus_color: #DDB6F2
+twobwm.unfocus_color: #6E6C7E
+twobwm.fixed_color: #ABE9B3
+twobwm.unkill_color: #F28FAD
+twobwm.outer_border_color: #1E1E2E
+twobwm.fixed_unkill_color: #FAE3B0
+twobwm.inverted_colors: true
+twobwm.enable_compton: false
