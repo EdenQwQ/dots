@@ -108,7 +108,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": "<span foreground='#cba6f7'>  </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#cba6f7'> </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "on-click": "kitty --class=clock,clock --title=clock -o remember_window_size=no -o initial_window_width=600 -o initial_window_height=200 -e tty-clock -s -c -C 5"
   },
@@ -120,10 +120,10 @@
     "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span>{capacity}%",
     "format-warning": "<span size='13000' foreground='#a6e3a1'>{icon} </span>{capacity}%",
     "format-critical": "<span size='13000' foreground='#f38ba8'>{icon} </span>{capacity}%",
-    "format-charging": "<span size='13000' foreground='#a6e3a1'>  </span>{capacity}%",
-    "format-plugged": "<span size='13000' foreground='#a6e3a1'>  </span>{capacity}%",
-    "format-alt": "<span size='13000' foreground='#a6e3a1'>{icon} </span>{time}",
-    "format-full": "<span size='13000' foreground='#a6e3a1'>  </span>{capacity}%",
+    "format-charging": "<span size='13000' foreground='#a6e3a1'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#a6e3a1'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#a6e3a1'>{icon}</span>{time}",
+    "format-full": "<span size='13000' foreground='#a6e3a1'> </span>{capacity}%",
     "format-icons": [
       "",
       "",

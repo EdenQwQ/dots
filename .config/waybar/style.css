@@ -5,7 +5,7 @@
 
 window#waybar {
     color: @base04;
-    background: shade(alpha(@base00, 0.9), 1);
+    background: shade(alpha(@base00, 0.0), 1);
 }
 
 tooltip {
@@ -35,12 +35,12 @@ tooltip {
     font-family: 'ComicMono NF';
     font-size: 14px;
 	padding: 2px 10px;
-    background: shade(alpha(@base01, 0.8), 1.00);
-    border-radius: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    background: shade(alpha(@base00, 0.8), 1.00);
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 #tags {
@@ -48,9 +48,8 @@ tooltip {
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-	margin-top: 5px;
-    border-radius: 15px;
-    background: shade(alpha(@base01, 0.8), 1.00);
+    border-radius: 5px;
+    background: shade(alpha(@base00, 0.8), 1.00);
 }
 
 #tags button {
