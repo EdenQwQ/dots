@@ -1,0 +1,10 @@
+#!/usr/bin/julia
+
+try
+  run(`doas killall swhks swhkd`)
+catch
+end
+
+path = ARGS[1]
+
+run(`/usr/bin/swhks` & `pkexec /usr/bin/swhkd -c $path`)

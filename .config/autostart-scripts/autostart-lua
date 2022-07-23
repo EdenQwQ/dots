@@ -1,0 +1,39 @@
+#!/usr/bin/lua
+
+-- arguments: --use-swaybg <true/false> --swhkdrc-path <path>
+
+local wallpaper = "/home/eden/Pictures/wallpapers/blossom3cat.png"
+
+-- environment
+os.execute("dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY &")
+
+-- wallpaper
+if arg[1] == "true" then
+  os.execute(string.format("swaybg -i %s &", wallpaper))
+end
+
+-- misc
+local commands = {
+  "doas killall swhks swhkd",
+  "wlsunset -l 30 -L 120 -t 3500 -T 5000 &",
+  "mpd &",
+  "~/.local/bin/clash &",
+  "kanshi &",
+  "swhks &",
+  "waybar &",
+  "nm-applet --indicator &",
+  "kdeconnect-indicator &",
+  "blueman-applet &",
+  "fcitx5 -d -r &",
+  "/usr/lib/xdg-desktop-portal-wlr &",
+  "/usr/libexec/polkit-gnome-authentication-agent-1 &",
+}
+
+for _, command in ipairs(commands) do
+  os.execute(command)
+end
+
+-- hotkey
+os.execute(string.format("/usr/local/bin/run-swhkd %s &", arg[2]))
+os.execute("doas killall evremap")
+os.execute(string.format("doas evremap remap ~/.config/evremap.toml &"))

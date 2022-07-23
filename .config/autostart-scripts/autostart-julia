@@ -1,0 +1,25 @@
+#!/usr/bin/julia
+
+wallpaper = "/home/eden/Pictures/wallpapers/blossom3cat.png"
+
+run(`dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY`)
+path = ARGS[2]
+println(path)
+
+commands = 
+  `swaybg -i $wallpaper` &
+  `/usr/libexec/polkit-gnome-authentication-agent-1` &
+  `doas killall swhks swhkd` &
+  `wlsunset -l 30 -L 120 -t 3500 -T 5000` &
+  `mpd` &
+  `/home/eden/.local/bin/clash` &
+  `kanshi` &
+  `waybar` &
+  `nm-applet --indicator` &
+  `kdeconnect-indicator` &
+  `blueman-applet` &
+  `fcitx5 -d -r` &
+  `/home/eden/.config/autostart-scripts/start-swhkd $path` &
+  `doas evremap remap /home/eden/.config/evremap.toml`
+
+run(commands)
