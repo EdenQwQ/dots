@@ -1,0 +1,34 @@
+sw_volume: 100
+audio_device_state:1:pulse audio
+audio_device_state:0:PipeWire Sound Server
+audio_device_state:1:my_fifo
+state: pause
+current: 0
+time: 25.856000
+random: 1
+repeat: 1
+single: 0
+consume: 0
+crossfade: 2
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:BoyWithUke - LoveSick.mp3
+1:BoyWithUke - Bad Luck.mp3
+2:BoyWithUke - Haha, Hi.mp3
+3:BoyWithUke - Out of Tune.mp3
+4:BoyWithUke - Shy.mp3
+5:BoyWithUke - Two Moons.mp3
+6:BoyWithUke - Contigo.mp3
+7:BoyWithUke - Far Away.mp3
+8:BoyWithUke - Heart of Ice.mp3
+9:BoyWithUke - IDGAF.mp3
+10:BoyWithUke - Let Me Down.mp3
+11:BoyWithUke - Long Drives.mp3
+12:BoyWithUke - Prairies.mp3
+13:BoyWithUke - Scared of the Dark.mp3
+14:BoyWithUke - She Said No.mp3
+15:BoyWithUke - Toxic.mp3
+16:BoyWithUke - Understand.mp3
+17:BoyWithUke - Psycho.mp3
+playlist_end
